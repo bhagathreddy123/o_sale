@@ -9,3 +9,9 @@ yarn --version
 
 rails new o_sale -T
 
+unzip static_files.zip
+ cp static_files/assets/js/*  ../training/o_sale/public/assets/js/
+ cp static_files/assets/fonts/*  ../training/o_sale/public/assets/fonts/
+ cp static_files/assets/css/*  ../training/o_sale/public/assets/css/
+
+
