@@ -4,6 +4,9 @@
  rvm gemset use rails-6.0.0rc1
   gem install rails -v 6.0.0rc1
 
+  rvm list gemsets
+  
+
 yarn --version
 1.19.1
 
@@ -14,4 +17,6 @@ unzip static_files.zip
  cp static_files/assets/fonts/*  ../training/o_sale/public/assets/fonts/
  cp static_files/assets/css/*  ../training/o_sale/public/assets/css/
 
+yarn add bootstrap jquery popper
 
+ mv custom.css ../../../app/stylesheets/
