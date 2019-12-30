@@ -4,10 +4,10 @@
     <div class="card-body">
       <h5 class="card-title">
         <span class="badge badge-pill badge-purple float-right">
-        <%= product[:price] %>
+        <%=  number_to_currency(product[:price]) %>
        </span>
-       <a href="detail-page.html"><%= product[:name] %></a>
-       <p class="card-text"><%= product[:description] %></p>
+         <%= link_to product[:name], "details-page.html" %>
+       <p class="card-text"><%= truncate(product[:description], length: 150) %></p>
      </h5>
    </div>
  </div>
