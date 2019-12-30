@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/products/:id/edit", to: "products#edit"
   put "/products/:id", to: "products#update"
   get "/products/:id", to: "products#show"
+  delete "/products/:id", to: "products#destroy"
 end
