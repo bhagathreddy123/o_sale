@@ -11,8 +11,10 @@ class ProductsController < ApplicationController
   def create
   	@product = Product.new(product_params)
   	if @product.save
+      flash[:notice]="Product created successfully"
   		redirect_to products_path
   	else
+      flash.now[:alert]= "Product has not been saved"
   		render :new
   	end
   end
@@ -22,8 +24,10 @@ class ProductsController < ApplicationController
 
   def update
   	if @product.update(product_params)
+      flash[:notice]="Product updated successfully"
   		redirect_to products_path 
   	else
+      flash.now[:alert]= "Product has not been updated"
   		render :edit
   	end
   end
