@@ -1,0 +1,54 @@
+<div class="form-body-style px-5 pt-4">
+  <%= form_with model: @user, local: true do |f| %>
+  <div class="form-group row">
+    <div class= "col-md-3 col-form-label">
+      <%= f.label :first_name %>
+    </div>
+    <div class="col-md-9">
+      <%= f.text_field :first_name, id: "first_name", class: "form-control", placeholder: "user First Name", autofocus: "true" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class= "col-md-3 col-form-label">
+      <%= f.label :last_name %>
+    </div>
+    <div class="col-md-9">
+      <%= f.text_field :last_name, id: "last_name", class: "form-control", placeholder: "User Last Name", autofocus: "true" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class= "col-md-3 col-form-label">
+      <%= f.label :email %>
+    </div>
+    <div class="col-md-9">
+     <%= f.email_field :email, id: "email", class: "form-control", placeholder: "User Email Here", rows: '5' %>
+   </div>
+ </div>
+
+ <div class="form-group row">
+   <div class="col-md-3 col-form-label">
+    <%= f.label :password, "Image" %>
+  </div>
+  <div class="col-md-9">
+   <%= f.password_field :password, id: "image", class: "form-control" %>
+ </div>
+</div>
+
+<div class="form-group row">
+   <div class="col-md-3 col-form-label">
+    <%= f.label :password_confirmation, "Image" %>
+  </div>
+  <div class="col-md-9">
+   <%= f.password_field :password_confirmation, id: "image", class: "form-control" %>
+ </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-md-9 offset-md-3">
+   <%= f.submit "submit", class: "btn btn-outline-purple"  %>
+ </div>
+</div>
+<%end%>
+</div>

@@ -20,3 +20,6 @@ unzip static_files.zip
 yarn add bootstrap jquery popper
 
  mv custom.css ../../../app/stylesheets/
+
+ regexone.com
+ rubular.com
