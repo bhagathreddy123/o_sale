@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
-
   before_action :require_signin, except: [:index, :show]
   before_action :set_product, only: [:edit,:update, :show, :destroy]
+  before_action :require_owner, only: [:edit, :update, :destroy]
   
   def index
   	@products = Product.all
@@ -45,6 +45,13 @@ class ProductsController < ApplicationController
   end
 
   private
+
+  def require_owner
+    unless @product.owned_by?(current_user)
+      flash[:alert]="access denied"
+          redirect_to root_path
+    end
+  end
 
   def set_product
   	begin
