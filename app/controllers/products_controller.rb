@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
+
+  before_action :require_signin, except: [:index, :show]
   before_action :set_product, only: [:edit,:update, :show, :destroy]
+  
   def index
   	@products = Product.all
   end

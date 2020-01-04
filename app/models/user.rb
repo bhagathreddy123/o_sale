@@ -7,6 +7,8 @@ class User < ApplicationRecord
 	  }
 	has_secure_password
 
+	has_many :products, dependent: :destroy
+
 	before_save :downcase_email
 
 	private
