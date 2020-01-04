@@ -12,12 +12,24 @@
       <li class="nav-item">
         <%= link_to "New Product", new_product_path, class: "nav-link" %>
       </li>
+      <% if current_user %>
       <li class="nav-item">
-        <%= link_to "Sign In", "#", class: "nav-link" %>
+        <%= link_to "SignOut", session_path, method: :delete, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Sign Up", "#", class: "nav-link" %>
+        <p class="navbar-text"> Signin as 
+          <%= current_user.email %>
+            
+          </p>
       </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Sign In", signin_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign Up", signup_path, class: "nav-link" %>
+      </li>
+      <% end %>
     </ul>
   </div>
 </nav>

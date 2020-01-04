@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
   def new
+    if current_user
+      redirect_to root_path
+    end
   end
 
   def create
@@ -15,5 +18,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    cookies.delete :user_id
+    flash[:notice]="you have been signed out"
+    redirect_to root_path
   end
 end
