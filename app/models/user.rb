@@ -8,6 +8,8 @@ class User < ApplicationRecord
 	has_secure_password
 
 	has_many :products, dependent: :destroy
+	has_many :comments, dependent: :destroy
+	
 
 	before_save :downcase_email
 
