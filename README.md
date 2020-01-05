@@ -30,3 +30,10 @@ Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
 
 
  sudo apt-get install libpq-dev
+
+ $ heroku login
+
+$ heroku run rails db:migrate
+ $ heroku run rails db:seed
+$ heroku open
+$  rails webpacker:install:react
