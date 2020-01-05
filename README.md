@@ -37,3 +37,4 @@ $ heroku run rails db:migrate
  $ heroku run rails db:seed
 $ heroku open
 $  rails webpacker:install:react
+https://babeljs.io/
