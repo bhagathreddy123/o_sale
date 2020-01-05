@@ -16,4 +16,6 @@ class Product < ApplicationRecord
 	def owned_by?(owner)
 		user == owner
 	end
+
+	
 end

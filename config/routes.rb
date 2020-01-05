@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   # resources :products, only: [:index, :show, :new,:edit, :update, :destroy]
-  resources :products
+  resources :products do
+    resources :comments, only: [:create]
+  end
   root to: "products#index"
   get 'users/new', to: 'users#new'
   get '/signup', to: "users#new"
