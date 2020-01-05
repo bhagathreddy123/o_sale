@@ -23,3 +23,10 @@ yarn add bootstrap jquery popper
 
  regexone.com
  rubular.com
+
+Fetching pg 1.2.1
+Installing pg 1.2.1 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+
+ sudo apt-get install libpq-dev
